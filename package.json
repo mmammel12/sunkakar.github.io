@@ -1,0 +1,23 @@
+{
+  "name": "sunkakar.github.io-1",
+  "version": "1.0.0",
+  "description": "This is a GitHub page static website for a personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunkakar/sunkakar.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunkakar/sunkakar.github.io/issues"
+  },
+  "homepage": "https://github.com/sunkakar/sunkakar.github.io#readme",
+  "devDependencies": {
+    "webpack": "^4.28.2"
+  }
+}
