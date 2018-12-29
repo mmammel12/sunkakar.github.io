@@ -1,4 +1,4 @@
-body,nav{
+body{
     margin: 0;
     padding: 0;
 }
@@ -12,19 +12,32 @@ body,nav{
 }
 
 .sticky {
-    background-color: darkgray;
-    display: flex;
-    justify-content: space-around;
-    height: 10vh;
     position: sticky;
     top: 0;
+    background-color: darkgray;
+    display: flex;
+    float: left;
+    height: 10vh;
+    transition: all .5s ease;
+    width: 100%;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    background-color: darkgray;
+    display: flex;
+    width: 100%;
+    float: left;
+    height: 10vh;
+    transition: all .5s ease;
 }
 
 .header-list {
     display: flex;
     list-style-type: none;
     padding: 0;
-    width: 80%;
+    float: left;
     justify-content: space-around;
     align-items: center;
     align-content: center;
@@ -33,7 +46,6 @@ body,nav{
 .header-list > li {
     display: flex;
     margin:10px;
-    font-size: 1em;
     justify-content: space-around;
     font-weight: bold;
 }
@@ -41,6 +53,13 @@ body,nav{
 .header-list > li > img {
     width: 20px;
     height: 20px;
+    transition: 0.2s;
+}
+
+.header-list > li > img:hover{
+    width: 30px;
+    height: 30px;
+    transition: 0.2s;
 }
 
 .content-half {
@@ -48,8 +67,9 @@ body,nav{
     display: flex;
     float: left;
     width: 50%;
-    padding: 10px;
-    height: 90vh;
+    padding-top: 10%;
+    padding: 20px;
+    height: 110vh;
 }
 
 #content-half-one{
@@ -62,17 +82,80 @@ body,nav{
     color: black;
 }
 
-.content-wrapper:after {
-    content: "";
-    clear: both;
+
+/*
+----    Phone Config    ----
+*/
+@media (min-width:300px){
+    
+    .content-half{
+        width: 100%;
+        padding-top: 10%;
+        box-sizing: border-box;
+        display: flex;
+        float: left;
+        height: 90vh;
+    }
+
+    .header-list{
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .fixed{
+        justify-content: space-around; 
+    }
+
+    .sticky{
+        justify-content: space-around;
+        width: 100%;
+    }
 }
 
- @media (max-width: 1024px) and (min-width: 800px) {
-    
+
+/*
+----    Tablet Config    ----
+*/
+@media (min-width:700px){
+
+    .header-list{
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .content-half {
+        box-sizing: border-box;
+        display: flex;
+        float: left;
+        width: 50%;
+        padding-top: 10%;
+        padding: 20px;
+        height: 110vh;
+    }
+
 }
 
 /*
-@media (max-width:768px){}
-@media  (max-width: 1024px) and (min-width: 800px){}
-@media (max-width:425px) {}
+----    Laptop Config    ----
 */
+
+@media (min-width:800px){
+
+    .header-list {
+        float: left;
+        justify-content: left;
+    }
+
+    .content-half {
+        box-sizing: border-box;
+        display: initial;
+        float: left;
+        width: 50%;
+        padding-top: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        height: 150vh;
+    }
+
+}
