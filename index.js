@@ -1,3 +1,4 @@
+//JS 
 $(document).ready(function(){  
 
   $("#about-tab").click(function(){alert("about-tab");})
